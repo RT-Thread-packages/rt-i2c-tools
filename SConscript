@@ -4,9 +4,9 @@ import rtconfig
 # get current directory
 cwd     = GetCurrentDir()
 # The set of source files associated with this SConscript file.
-src     = Glob('src/*.c')
-src     += Glob('src/i2c_utils.cpp')
-src     += Glob('src/i2c_tools.cpp')
+src		= []
+src     += Glob('src/i2c_utils.c')
+src     += Glob('src/i2c_tools.c')
 
 if GetDepend('I2C_TOOLS_USE_SW_I2C'):
 	src    += Glob('src/SoftwareI2C.cpp')
